@@ -3,8 +3,10 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // Create a new type of 'deck' which is a slice of strings
@@ -29,6 +31,15 @@ func newDeck() deck { //cand se apeleaza functia, vom returna mereu ceva de tipu
 func (d deck) print() { // d este o copie din deck, deck este tipul declarat mai sus
 	for i, card := range d {
 		fmt.Println(i, card)
+	}
+}
+
+func (d deck) shuffle() {
+	source := rand.NewSource(time.Now().UnixNano())
+	r := rand.New(source)
+	for index := range d {
+		newPosition := r.Intn(len(d))
+		d[index], d[newPosition] = d[newPosition], d[index]
 	}
 }
 

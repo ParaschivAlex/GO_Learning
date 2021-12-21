@@ -3,11 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	//var colors map[string]string
-	colors := make(map[string]string)
+	colors := map[string]string{
+		"red":   "#ff0000",
+		"green": "#00ff00",
+		"blue":  "#0000ff",
+	}
+	//fmt.Println(colors)
+	printMap(colors)
+}
 
-	colors["new_color"] = "#23ff21"
-	delete(colors, "new_color")
-
-	fmt.Println(colors)
+func printMap(clrs map[string]string) {
+	for key, value := range clrs {
+		fmt.Println(key, "-->", value)
+	}
 }

@@ -17,7 +17,7 @@ func newDeck() deck { //cand se apeleaza functia, vom returna mereu ceva de tipu
 	//nu adaugam receiver
 	cards := deck{}
 
-	cardSymbols := []string{"Spades", "Diamonds", "Hearts", "Caros"}
+	cardSymbols := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
 	cardNumbers := []string{"Ace", "Two", "Three", "Four"}
 
 	for _, symbol := range cardSymbols {

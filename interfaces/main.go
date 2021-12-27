@@ -21,20 +21,12 @@ func printGreeting(b bot) {
 	fmt.Println(b.getGreeting())
 }
 
-/*func printGreeting(eb englishBot) {
-	fmt.Println(eb.getGreeting())
-}
-
-func printGreeting(sb spanishBot) {
-	fmt.Println(sb.getGreeting())
-}*/
-
-func (englishBot) getGreeting() string { // nu pun (eb englishBot) pentru ca nu folosesc eb si pot lasa doar receiverul
+func (eb englishBot) getGreeting() string { // nu pun (eb englishBot) pentru ca nu folosesc eb si pot lasa doar receiverul
 	//costum logic here
 	return "Hello man!"
 }
 
-func (spanishBot) getGreeting() string {
+func (sb spanishBot) getGreeting() string {
 	//costum logic here
 	return "Ola amigo!"
 }
